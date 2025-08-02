@@ -5,7 +5,7 @@ BillingCountry as País,
 SUM(Total) as Soma_Total_País,
 COUNT(Total) as Quantidade_Compras,
 MIN(Total) as Menor_compra,
-Max(Total) as Maior_compra,
+MAX(Total) as Maior_compra,
 ROUND(AVG(Total), 2) as Ticket_medio
 FROM invoices
 GROUP BY BillingCountry;
