@@ -14,3 +14,46 @@
 
 
 -- Na consulta anterior, utilize o símbolo de coringa para construir padrões textuais
+
+SELECT
+CustomerId,
+FirstName,
+LastName,
+Address
+FROM customers
+WHERE Country LIKE 'Brazil'
+
+SELECT
+CustomerId,
+LOWER (FirstName),
+UPPER (LastName),
+Address
+FROM customers
+WHERE Country LIKE 'Brazil'
+
+SELECT
+CustomerId,
+LOWER (FirstName) as Nome,
+UPPER (LastName)as Sobrenome,
+FirstName || ' ' || LastName as Nome_completo,
+Address as Endereço
+FROM customers
+WHERE Country LIKE 'Brazil'
+
+SELECT
+CustomerId,
+LOWER (FirstName) as Nome,
+UPPER (LastName)as Sobrenome,
+FirstName || ' ' || LastName as Nome_completo,
+REPLACE (Address,'Av.', 'Avenida') as Endereço
+FROM customers
+WHERE Country LIKE 'Brazil'
+
+SELECT
+CustomerId,
+LOWER (FirstName) as Nome,
+UPPER (LastName)as Sobrenome,
+FirstName || ' ' || LastName as Nome_completo,
+REPLACE (Address,'Av.', 'Avenida') as Endereço
+FROM customers
+WHERE Country LIKE '%zil'

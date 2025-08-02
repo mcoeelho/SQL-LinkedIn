@@ -5,3 +5,16 @@
 
 
 -- Nesta mesma consulta, atribua um alias com título em português para cada coluna
+
+SELECT DISTINCT Country
+FROM customers;
+
+SELECT DISTINCT
+Country,
+Company
+FROM customers;
+
+SELECT DISTINCT
+Country AS País,
+Company AS Empresas
+FROM customers;
