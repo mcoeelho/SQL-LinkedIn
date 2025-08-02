@@ -2,3 +2,10 @@
 
 
 -- Da tabela invoice, remova todos os invoices cujo o Total seja menor do que 1
+
+
+DELETE FROM invoices
+WHERE Invoiceid = 33;
+
+DELETE FROM invoices
+WHERE Total < 1;
